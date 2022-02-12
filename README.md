@@ -40,7 +40,12 @@ Describe any challenges encountered while building the app.
 
 ### App Walkthrough GIF
 
+- Functioning app with App Icon and Launch Screen present. The User is able to scroll through a list of movies each containing their title, synopsis and movie poster
+
 <img src='https://github.com/bryandevelops/Flix/blob/master/demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
+
+- The app is compatible with multiple device sizes and orientations including: iPhone 11 Pro Max (6.5in), iPhone 11 Pro (5.8in), iPhone 11 (6.1in), and even the iPhone SE (4.0in).
+<img src='https://github.com/bryandevelops/Flix/blob/master/demo2.gif' title='Video Walkthrough' width='800' alt='Video Walkthrough' />
 
 ### Notes
 The biggest challenge encountered while building this part of the app was learning and understanding some of Swift's syntax in order to get the code to do what I wanted it to do. The concepts aren't new, but with every language comes new conventions and syntax. I'm talking about things such as String Interpolation or Type Casting (which some languages do implicitly). Also, playing around with the Auto-Layout constraints proved to be a little tedious as well. There was a lot of experimentation seeing how the different constraints and settings changeed the appearance of my Table View after every build. The experimentation led me to get a better grasp into how items interact though, so overall it was worth tinkering extensively with.
