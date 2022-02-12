@@ -40,7 +40,7 @@ Describe any challenges encountered while building the app.
 
 ### App Walkthrough GIF
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src='https://github.com/bryandevelops/Flix/blob/master/demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 ### Notes
-Describe any challenges encountered while building the app.
+The biggest challenge encountered while building this part of the app was learning and understanding some of Swift's syntax in order to get the code to do what I wanted it to do. The concepts aren't new, but with every language comes new conventions and syntax. I'm talking about things such as String Interpolation or Type Casting (which some languages do implicitly). Also, playing around with the Auto-Layout constraints proved to be a little tedious as well. There was a lot of experimentation seeing how the different constraints and settings changeed the appearance of my Table View after every build. The experimentation led me to get a better grasp into how items interact though, so overall it was worth tinkering extensively with.
