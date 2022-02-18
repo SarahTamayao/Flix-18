@@ -64,7 +64,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = moviesTableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
         
+        // Pass selected movie to the details view
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        moviesTableView.deselectRow(at: indexPath, animated: true)  //Deselect, or unhighlight the cell after clicking on it
     }
 
 }
