@@ -1,5 +1,5 @@
 //
-//  MovieDetailsViewController.swift
+//  MovieDetailsViewController2.swift
 //  Flix
 //
 //  Created by Bryan Santos on 2/18/22.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-class MovieDetailsViewController: UIViewController {
+class MovieDetailsViewController2: UIViewController {
     
     @IBOutlet weak var backdropView: UIImageView!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var synopsisLabel: UILabel!
     
     var movie: [String:Any]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         let posterPath = movie["poster_path"] as! String
         let backdropPath = movie["backdrop_path"] as? String ?? "https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg?size=626&ext=jpg"
