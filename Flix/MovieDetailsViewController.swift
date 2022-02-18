@@ -32,7 +32,7 @@ class MovieDetailsViewController: UIViewController {
         posterView.af.setImage(withURL: posterURL!)
         backdropView.af.setImage(withURL: backdropURL!)
         
-//        synopsisLabel.sizeToFit()
+        self.title = titleLabel.text
     }
     
 
