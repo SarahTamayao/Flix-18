@@ -7,19 +7,30 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### User Stories
 
 #### REQUIRED (10pts)
-- [ ] (5pts) User can tap a cell to see more details about a particular movie.
-- [ ] (5pts) User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
+- [x] (5pts) User can tap a cell to see more details about a particular movie.
+- [x] (5pts) User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 #### BONUS
-- [ ] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
+- [x] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIF
 
-COMING SOON
+- The User is now able to click each individual cell to reach the movies detail view. They are also able to scroll through a grid of movies and access movie details that way as well
+<img src='https://github.com/bryandevelops/Flix/blob/master/demo3.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 ### Notes
-Describe any challenges encountered while building the app.
+The most challenging aspect of part two of Flix' creation had to be again fiddling with the settings to get the layout just right. Messing around with Auto-Layout last week made determining the constraints for the Detail View's really straight-forward. This time around, I was wrapping my head around how to properly construct a layout for a Collection View (determining the number of items per row, line and item spacing, etc). 
+
+The backend things are slowly starting to click, although I ran into more hurdles regarding syntax. In one particular instance, I wanted to create a conditional that would change a movies backdrop path to a default one if the "backdrop_path" key ever had a value of null. This led to me having to figure out how I can check for Null in Swift. Ultimately I managed to get it to work and I was able to have movies either load their respective backdrop images, or a general default one. Here's a snippet of the code below:
+```
+let backdropPath = movie["backdrop_path"] as? String ?? "https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg?size=626&ext=jpg"
+var backdropURL = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
+        
+if (movie["backdrop_path"] as? String == nil) {
+   backdropURL = URL(string: backdropPath)
+}
+```
 
 ---
 
@@ -45,6 +56,7 @@ Describe any challenges encountered while building the app.
 <img src='https://github.com/bryandevelops/Flix/blob/master/demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 - The app is compatible with multiple device sizes and orientations including: iPhone 11 Pro Max (6.5in), iPhone 11 Pro (5.8in), iPhone 11 (6.1in), and even the iPhone SE (4.0in).
+
 <img src='https://github.com/bryandevelops/Flix/blob/master/demo2.gif' title='Video Walkthrough' width='800' alt='Video Walkthrough' />
 
 ### Notes
